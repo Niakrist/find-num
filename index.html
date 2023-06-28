@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SVG Map</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<header class="header"></header>
+
+<body>
+	<div class="container">
+		<div class="parent">
+			<div class="statistics">
+				<ul class="statistics__list">
+					<li class="statistics__item">Осталось времени: <span class="statistics__item-time">15</span></li>
+					<li class="statistics__item">Нашли клеточек: <span class="statistics__item-score">0</span> из 10</li>
+					<li class="statistics__item">Открыли клеточек: <span class="statistics__item-attempts">0</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="table__menu">
+			<button class="table__menu-start button-start-game">Start Game</button>
+			<button class="table__menu-start button-reload-game">Reload Game</button>
+			<button class="table__menu-start button-end-game">End Game</button>
+		</div>
+
+		<div class="field__wrapp">
+			<table class="table-field">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+			</table>
+		</div>
+
+		<h2 class="table-field__creatre-title">Выберете размер поля для игры:</h2>
+		<div class="table-field__creatre">
+			<button class="button-creatre button-creatre-4">Поле 4 на 4</button>
+			<button class="button-creatre button-creatre-6">Поле 6 на 6</button>
+			<button class="button-creatre button-creatre-8">Поле 8 на 8</button>
+			<button class="button-creatre button-creatre-10">Поле 10 на 10</button>
+		</div>
+
+
+
+		<div class="popup-win" style="display: none">
+			<div class="popup-win__wrapper">
+				<h2 class="popup-win__titile">Вы победили</h2>
+				<ul class="popup-win__ist">
+					<li class="popup-win__item">Статистика</li>
+					<li class="popup-win__item">Ваше время: <span>0</span></li>
+					<li class="popup-win__item">Количество попыток: <span>0</span></li>
+				</ul>
+				<button class="popup-win__btn">Начать заново</button>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
