@@ -17,6 +17,10 @@ const statisticsItemTime = document.querySelector('.statistics__item-time');
 const statisticsItemScore = document.querySelector('.statistics__item-score');
 const statisticsItemAttempts = document.querySelector('.statistics__item-attempts');
 
+const popupLooserItemTime = document.querySelector('.popup-looser__item-time');
+const popupLooserItemScore = document.querySelector('.popup-looser__item-score');
+const popupLooserItemAttempts = document.querySelector('.popup-looser__item-attempts');
+
 
 // SERVICE
 const setField = new Set();
@@ -94,6 +98,7 @@ function createHiddenNums(num) {
 function searchNum(setField) {
 
   // START GAME
+
   buttonStartGame.addEventListener('click', function () {
     btn4.disabled = true;
     btn6.disabled = true;
@@ -116,7 +121,14 @@ function searchNum(setField) {
 
       if (Number(statisticsItemTime.textContent) === 0) {
         clearInterval(timerId);
-        console.log('12465')
+
+        const popupLooser = document.querySelector('.popup-looser');
+        popupLooser.style.display = 'flex';
+        popupLooserItemTime.textContent = popupLooserItemTime.textContent - statisticsItemTime.textContent;
+        popupLooserItemScore.textContent = statisticsItemScore.textContent;
+        popupLooserItemAttempts.textContent = statisticsItemAttempts.textContent;
+
+
       }
     }, 1000);
 
@@ -124,15 +136,18 @@ function searchNum(setField) {
     const tds = document.querySelectorAll('td');
 
     tds.forEach((td) => {
+
       td.addEventListener('click', function () {
         console.log(setField);
-
-        if (setField.has(Number(td.textContent)) && td.className != 'rules') {
-          td.classList.add('rules');
-          console.log('+++')
-        } else if (!setField.has(Number(td.textContent)) && td.className != 'error') {
-          td.classList.add('error');
-          console.log('---');
+        if (statisticsItemTime.textContent > 0) {
+          if (setField.has(Number(td.textContent)) && td.className != 'rules') {
+            td.classList.add('rules');
+            statisticsItemScore.textContent++;
+            statisticsItemAttempts.textContent++;
+          } else if (!setField.has(Number(td.textContent)) && td.className != 'error') {
+            td.classList.add('error');
+            statisticsItemAttempts.textContent++;
+          }
         }
       })
     })
