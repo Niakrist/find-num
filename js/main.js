@@ -11,15 +11,19 @@ const btn10 = document.querySelector('.button-creatre-10');
 const buttonStartGame = document.querySelector('.button-start-game');
 const buttonReloadGame = document.querySelector('.button-reload-game');
 const buttonEndGame = document.querySelector('.button-end-game');
+const popupLooserBtn = document.querySelector('.popup-looser__btn');
 
 // Statistics
 const statisticsItemTime = document.querySelector('.statistics__item-time');
 const statisticsItemScore = document.querySelector('.statistics__item-score');
 const statisticsItemAttempts = document.querySelector('.statistics__item-attempts');
 
+const popupLooser = document.querySelector('.popup-looser');
 const popupLooserItemTime = document.querySelector('.popup-looser__item-time');
 const popupLooserItemScore = document.querySelector('.popup-looser__item-score');
+const itemTotal = document.querySelector('.item-total');
 const popupLooserItemAttempts = document.querySelector('.popup-looser__item-attempts');
+
 
 
 // SERVICE
@@ -84,6 +88,9 @@ function feelTabbleField(num) {
     }
     tableField.appendChild(tr);
   }
+  itemTotal.textContent = num;
+  console.log(itemTotal.textContent)
+
   createHiddenNums(num);
 }
 
@@ -121,17 +128,12 @@ function searchNum(setField) {
 
       if (Number(statisticsItemTime.textContent) === 0) {
         clearInterval(timerId);
-
-        const popupLooser = document.querySelector('.popup-looser');
         popupLooser.style.display = 'flex';
         popupLooserItemTime.textContent = popupLooserItemTime.textContent - statisticsItemTime.textContent;
         popupLooserItemScore.textContent = statisticsItemScore.textContent;
         popupLooserItemAttempts.textContent = statisticsItemAttempts.textContent;
-
-
       }
     }, 1000);
-
 
     const tds = document.querySelectorAll('td');
 
@@ -164,5 +166,13 @@ function searchNum(setField) {
     btn10.disabled = false;
   })
 }
+
+
+popupLooserBtn.addEventListener('click', function () {
+  popupLooser.style.display = 'none';
+
+  feelTabbleField(num)
+
+})
 
 searchNum(setField);

@@ -10,26 +10,12 @@
 <header class="header"></header>
 
 <body>
-
-	<div class="obj">
-		<div class="obj__img"><img src="./zkl.jpg" alt=""></div>
-		<div class="obj__content">
-			<div class="obj__text">
-				<span>Оптовые поставки подшипников</span> по всей <span>России</span> и <span>странам СНГ</span> от производителя.
-				Товар из первых рук, самые низкие цены!
-			</div>
-			<div class="obj__mail">Присылайте заявки на почту: <span>sales@all-bearings.ru</span></div>
-		</div>
-	</div>
-
-
-
 	<div class="container">
 		<div class="parent">
 			<div class="statistics">
 				<ul class="statistics__list">
 					<li class="statistics__item">Осталось времени: <span class="statistics__item-time">15</span></li>
-					<li class="statistics__item">Нашли клеточек: <span class="statistics__item-score">0</span> из 10</li>
+					<li class="statistics__item">Нашли клеточек: <span class="statistics__item-score">0</span> из <span class="item-total">10</span></li>
 					<li class="statistics__item">Открыли клеточек: <span class="statistics__item-attempts">0</span></li>
 				</ul>
 			</div>
@@ -75,7 +61,7 @@
 						<span class="popup-looser__item-time">15</span>
 					</li>
 					<li class="popup-looser__item">Нашли клеточек: 
-						<span class="popup-looser__item-score">0</span> из 10
+						<span class="popup-looser__item-score">0</span> из <span class="item-total">10</span>
 					</li>
 					<li class="popup-looser__item">Открыли клеточек: 
 						<span class="popup-looser__item-attempts"></span>
@@ -83,6 +69,27 @@
 				</ul>
 				<button class="popup-looser__btn">Начать заново</button>
 				<button class="popup-looser__close"></button>
+			</div>
+		</div>
+
+
+		<div class="popup-win" style="display: none">
+			<div class="popup-win__wrapper">
+				<h2 class="popup-win__titile">Вы плбедили</h2>
+				<ul class="popup-win__list">
+					<li class="popup-win__item">Ваша статистика:</li>
+					<li class="popup-win__item">Прошло времени времени:
+						<span class="popup-win__item-time">15</span>
+					</li>
+					<li class="popup-win__item">Нашли клеточек: 
+						<span class="popup-win__item-score">0</span> из <span class="item-total">10</span>
+					</li>
+					<li class="popup-win__item">Открыли клеточек: 
+						<span class="popup-win__item-attempts"></span>
+					</li>
+				</ul>
+				<button class="popup-win__btn">Начать заново</button>
+				<button class="popup-win__close"></button>
 			</div>
 		</div>
 
