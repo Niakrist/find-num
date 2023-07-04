@@ -46,27 +46,20 @@ function gamesDefault() {
 gamesDefault();
 
 // Create table 4 x 4
-const createField4 = () => {
-  btn4.addEventListener('click', () => feelTabbleField(4));
-}
+const createField4 = () => btn4.addEventListener('click', () => feelTabbleField(4));
+
 createField4();
 
 // Create table 6 x 6
-const createField6 = () => {
-  btn6.addEventListener('click', () => feelTabbleField(6));
-}
+const createField6 = () => btn6.addEventListener('click', () => feelTabbleField(6));
 createField6();
 
 // Create table 8 x 8
-const createField8 = () => {
-  btn8.addEventListener('click', () => feelTabbleField(8));
-}
+const createField8 = () => btn8.addEventListener('click', () => feelTabbleField(8));
 createField8();
 
 // Create table 10 x 10
-const createField10 = () => {
-  btn10.addEventListener('click', () => feelTabbleField(10));
-}
+const createField10 = () => btn10.addEventListener('click', () => feelTabbleField(10));
 createField10();
 
 // function Feel table
